@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>class</title>
+</head>
+<body>
+   <script type="text/javascript">
+      // /*
+      // class -->use to create one or more object
+
+      // class --> object
+
+      // instance properties : what they have
+         //   -name
+         //   age
+         //    hieght
+
+      // instance methods --> what they do
+          // talk
+          //  run
+          // jump
+    
+
+      // constructor function ->use to set up object
+      // */
+
+      //STATIC  CLASS
+      class  Rectangle{
+         // setup
+         constructor(){
+            console.log("we have create rectangle");
+            this.hieght=5;
+            this.wedth=6;
+            this.color="blue";
+         }
+      }
+
+      let rectangle1=new Rectangle()
+   
+      //LETS MAKE DYNAMIC CLASS 
+      class RectangleDynamic{
+         constructor(_hieght, _width, _color){
+            this.hieght=_hieght;
+            this.width=_width;
+            this.color=_color;
+
+         }
+         //create the area of the rectangle
+         getArea(){
+            return this.width*this.hieght; //methode uses the instance properties of the oject constructor
+         }
+
+         areaDescr(){
+            console.log(`iam rectangele of ${this.hieght} x ${this.width} and ${this.color}`);
+         }
+      }
+
+      let rectangle1Dynamic1=new RectangleDynamic(7,8,"green")
+      let rectangle1Dynamic2=new RectangleDynamic(10,8,"yellow")
+
+      console.log(rectangle1Dynamic1.getArea());
+      console.log(rectangle1Dynamic2.getArea());
+      rectangle1Dynamic1.areaDescr()
+
+   </script>
+</body>
+</html>
